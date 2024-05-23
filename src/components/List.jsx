@@ -12,16 +12,6 @@ export default function List() {
       })}
     </div>
 
-    // div className="item-list-div">
-    //   {itemsList.map((item) => {
-  ); //     return (
-  //       <div key={item.id} className="item-div">
-  //         <h3>{item.title}</h3>
-  //         <p>{item.description}</p>
-  //         <img src={item.images[0]} />
-  //         <p>${item.price}</p>
-  //       </div>
-  //     );
-  //   })}
-  // </div>
+  ); 
+  
 }
