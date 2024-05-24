@@ -1,31 +1,35 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
+import itemsData from "../assets/data.json";
 
 function ItemDetails({ items }) {
   const { itemsId } = useParams();
-
-  const oneItem = item.find((item) => item._id === itemId);
+  console.log("This is the id extracted from the params ==>", itemsId);
+  console.log("This is the items prop plugin ==>", items);
+  const oneItem = itemsData.find((item) => item.id === itemsId);
+  console.log("This the one selected item", oneItem);
 
   return (
     <div>
       <h1>Item Details</h1>
-      {!oneItem && <Navigate to="/items" />}
+      {/* {!oneItem && <Navigate to="*" />} */}
       {oneItem && (
         <>
-          <h1>{item.title}</h1>
-          <p>{item.description}</p>
-          <p>{item.price}</p>
-          <p>{item.discountPercentage}</p>
-          <p>{item.rating}</p>
-          <p>{item.stock}</p>
-          <p>{item.brand}</p>
-          <p>{item.category}</p>
-          <p>{item.thumbnail}</p>
-          <p>{item.images}</p>
+          <h1>{oneItem.title}</h1>
+          <p>{oneItem.description}</p>
+          <p>{oneItem.price}</p>
+          <p>{oneItem.discountPercentage}</p>
+          <p>{oneItem.rating}</p>
+          <p>{oneItem.stock}</p>
+          <p>{oneItem.brand}</p>
+          <p>{oneItem.category}</p>
+          <p>{oneItem.thumbnail}</p>
+          <p>{oneItem.images}</p>
 
           {/* Back button */}
-          <Link to="/">Back
-          <button className="text-white px-4 py-2 rounded bg-green-500 hover:bg-green-600 transition duration-300 ease-in-out">
+          <Link to="/">
+            Back
+            <button className="text-white px-4 py-2 rounded bg-green-500 hover:bg-green-600 transition duration-300 ease-in-out">
               Back
             </button>
           </Link>
@@ -35,6 +39,4 @@ function ItemDetails({ items }) {
   );
 }
 
-export default ItemDetails
-
-
+export default ItemDetails;
