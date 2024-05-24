@@ -6,6 +6,9 @@ import List from "./components/List";
 import { Route, Routes } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import ItemDetails from "./pages/ItemDetails";
+import About from "./pages/About";
+import itemsData from "./assets/data.json"
+import NotFound from "./pages/NotFound.jsx";
 
 function App() {
   return (
@@ -16,11 +19,10 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Dashboard />} />
-        <Route
-          path="/items/:itemsId"
-          element={<ItemDetails items={itemsData} />}
-        />
-      </Routes>
+        <Route path="/items/:itemsId" element={<ItemDetails items={itemsData} />}/>
+        <Route path="*" element={<NotFound />} />
+        <Route path="/about" element={<About />} />
+     </Routes>
     </div>
   );
 }

@@ -6,7 +6,7 @@ const Footer = () => {
         src="https://cdn-icons-png.flaticon.com/256/25/25231.png"
         alt="GitHub Logo"
       />
-      <a href="https://github.com/yvesm001/react-miniproject" target="_blank">
+      <a href="https://github.com/yvesm001/react-ecomm-app" target="_blank">
         Github Repository
       </a>
     </footer>

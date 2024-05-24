@@ -5,6 +5,7 @@ body {
 }
 
 nav {
+  z-index: 2;
   background-color: #3772FF;
   color: ghostwhite;
   padding: 5px 20px;
@@ -37,10 +38,10 @@ nav p {
   background-color: ghostwhite;
   position: fixed;
   z-index: 1;
-  /* top: 0; */
+  top: 0;
   left: 0;
   overflow-x: hidden;
-  padding-top: 20px;
+  padding-top: 100px;
   box-shadow: 0px 0px 3px gray;
   text-align: center;
   /* margin-top: 73px; */
@@ -52,7 +53,6 @@ nav p {
   font-size: 17px;
   color: black;
   display: block;
-  border:
 }
 
 .sidebar a:hover {
@@ -70,7 +70,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  z-index: 2;
 }
 
 footer a {
@@ -100,6 +100,10 @@ footer a {
   display: flex;
   text-align: center;
 
+}
+
+.not-found{
+  margin-left: 40vw;
 }
 
 
@@ -160,3 +164,75 @@ span.black {
 .black {
   background: black;
 }
+/* .team {
+  margin-left: 20vw;
+}
+
+.about {
+  padding-top: 20px;
+  margin-left: 160px;
+  margin-top: 73px;
+  margin-bottom: 35px;
+  display: flex;
+  flex-direction: column;
+}
+
+#abt-team {
+  margin-left: 40vw;
+  margin-bottom: 0;
+} */
+
+
+.about {
+  margin-left: 160px;
+  margin-top: 73px;
+  margin-bottom: 35px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.team {
+  /* padding: 0 20px; */
+  display: flex;
+  justify-content: space-around;
+}
+
+.team > p {
+  padding: 0 20px;
+}
+
+.team-icon {
+  width: 45px;
+  padding: 10px;
+}
+
+.team-titles {
+  display: flex;
+  justify-content:space-around;
+}
+
+.project {
+  margin-bottom: 40px;
+}
+
+hr {
+  width: 65%;
+}
+
+/* .team > h2 {
+  display: block;
+
+}
+
+.project {
+  padding: 0 20px;
+}
+
+.project > p {
+  margin-top: 20px;
+}
+
+.project > h1 {
+  text-align:center;
+  padding-bottom: 20px;
+} */
