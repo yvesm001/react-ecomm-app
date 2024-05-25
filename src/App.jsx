@@ -7,7 +7,7 @@ import { Route, Routes } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import ItemDetails from "./pages/ItemDetails";
 import About from "./pages/About";
-import itemsData from "./assets/data.json"
+import itemsData from "./assets/data.json";
 import NotFound from "./pages/NotFound.jsx";
 
 function App() {
@@ -19,10 +19,10 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Dashboard />} />
-        <Route path="/items/:itemsId" element={<ItemDetails items={itemsData} />}/>
+        <Route path="/items/:itemId" element={<ItemDetails />} />
         <Route path="*" element={<NotFound />} />
         <Route path="/about" element={<About />} />
-     </Routes>
+      </Routes>
     </div>
   );
 }

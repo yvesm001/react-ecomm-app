@@ -14,9 +14,7 @@ nav {
   align-items: center;
   top: 0;
   position: fixed;
-  width: 100%;
-  
-  
+  width: 100%;  
 }
 
 nav p {
@@ -99,6 +97,7 @@ footer a {
   justify-content: center;
   display: flex;
   text-align: center;
+  
 
 }
 
@@ -141,6 +140,14 @@ main {
   border-radius: 4px;
   /* display: flex; */
 }
+
+.ProductCard a {
+  text-decoration: none;
+  color: black;
+  
+}
+
+
 
 span.green,
 span.red,
@@ -236,3 +243,17 @@ hr {
   text-align:center;
   padding-bottom: 20px;
 } */
+
+.item-details {
+  margin-left: 160px;
+  margin-top: 73px;
+  margin-bottom: 35px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.item-thumbnail {
+  width: 250px;
+}

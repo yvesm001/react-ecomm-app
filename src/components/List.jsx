@@ -11,7 +11,5 @@ export default function List() {
         return <ProductCard key={item.id} item={item} />;
       })}
     </div>
-
-  ); 
-  
+  );
 }
