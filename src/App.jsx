@@ -9,6 +9,7 @@ import ItemDetails from "./pages/ItemDetails";
 import About from "./pages/About";
 import itemsData from "./assets/data.json";
 import NotFound from "./pages/NotFound.jsx";
+import AddItem from "./components/AddItem.jsx";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Navbar />
       <Sidebar />
       <Footer />
+      
 
       <Routes>
         <Route path="/" element={<Dashboard />} />
