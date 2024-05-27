@@ -1,9 +1,7 @@
 import { useState } from "react";
-import itemsData from "../assets/data.json";
 
-function AddItem() {
-  const [itemsList, setItemsList] = useState(itemsData);
-
+function AddItem({ setItems }) {
+  //USE STATES FOR ADD ITEM FORM
   const [id, setId] = useState(0);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -11,14 +9,16 @@ function AddItem() {
   const [discountPercentage, setDiscountPercentage] = useState(0);
   const [rating, setRating] = useState(0);
   const [stock, setStock] = useState(0);
-  const [brand, setbrand] = useState("");
+  const [brand, setBrand] = useState("");
   const [category, setCategory] = useState("");
   const [thumbnail, setThumbnail] = useState("");
   //   const [images, setImages] = useState("");
 
+  //PREVENTING PAGE RELOAD WHEN CLICKING SUBMIT
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    //CREATING NEW ITEM
     const newItem = {
       id,
       title,
@@ -32,8 +32,10 @@ function AddItem() {
       thumbnail,
     };
 
-    setItemsList((prev) => [newItem, ...prev]);
+    //ADDING NEW ITEM TO ITEMLIST
+    setItems((prev) => [newItem, ...prev]);
 
+    //RESETTING VALUES
     setId(0);
     setTitle("");
     setDescription("");
@@ -47,111 +49,125 @@ function AddItem() {
   };
 
   return (
-    <div className="form-div">
+    <div>
       {/* FORM */}
-      <form onSubmit={handleSubmit}>
-        <div>
-          <h1>Add an Item</h1>
-          <label>
-            ID
-            <input
-              name="id"
-              type="number"
-              placeholder="ID"
-              onChange={(event) => setId(event.target.value)}
-            />
-          </label>
+      <div className="form-div">
+        <form onSubmit={handleSubmit}>
+          <div>
+            <h1>Add an Item</h1>
 
-          <label>
-            Title
-            <input
-              name="title"
-              type="text"
-              placeholder="Title"
-              onChange={(event) => setTitle(event.target.value)}
-            />
-          </label>
+            {/* SET ITEM ID */}
+            <label>
+              ID
+              <input
+                name="id"
+                type="number"
+                placeholder="ID"
+                onChange={(event) => setId(event.target.value)}
+              />
+            </label>
 
-          <label>
-            Description
-            <input
-              name="description"
-              type="text"
-              placeholder="Description"
-              onChange={(event) => setDescription(event.target.value)}
-            />
-          </label>
+            {/* SET ITEM TITLE */}
+            <label>
+              Title
+              <input
+                name="title"
+                type="text"
+                placeholder="Title"
+                onChange={(event) => setTitle(event.target.value)}
+              />
+            </label>
 
-          <label>
-            Price
-            <input
-              name="price"
-              type="number"
-              placeholder="Price"
-              onChange={(event) => setPrice(event.target.value)}
-            />
-          </label>
-          <label>
-            Discount Percentage
-            <input
-              name="discountPercentage"
-              type="number"
-              placeholder="Discount Percentage"
-              onChange={(event) => setDiscountPercentage(event.target.value)}
-            />
-          </label>
+            {/* SET ITEM DESCRIPTION */}
+            <label>
+              Description
+              <input
+                name="description"
+                type="text"
+                placeholder="Description"
+                onChange={(event) => setDescription(event.target.value)}
+              />
+            </label>
 
-          <label>
-            Rating
-            <input
-              name="rating"
-              type="number"
-              placeholder="Rating"
-              onChange={(event) => setRating(event.target.value)}
-            />
-          </label>
+            {/* SET ITEM PRICE */}
+            <label>
+              Price
+              <input
+                name="price"
+                type="number"
+                placeholder="Price"
+                onChange={(event) => setPrice(event.target.value)}
+              />
+            </label>
 
-          <label>
-            Stock
-            <input
-              name="stock"
-              type="number"
-              placeholder="Stock"
-              onChange={(event) => setStock(event.target.value)}
-            />
-          </label>
+            {/* SET ITEM DISCOUNT PERCENTAGE */}
+            <label>
+              Discount Percentage
+              <input
+                name="discountPercentage"
+                type="number"
+                placeholder="Discount Percentage"
+                onChange={(event) => setDiscountPercentage(event.target.value)}
+              />
+            </label>
 
-          <label>
-            Brand
-            <input
-              name="brand"
-              type="text"
-              placeholder="Brand"
-              onChange={(event) => setBrand(event.target.value)}
-            />
-          </label>
+            {/* SET ITEM RATING */}
+            <label>
+              Rating
+              <input
+                name="rating"
+                type="number"
+                placeholder="Rating"
+                onChange={(event) => setRating(event.target.value)}
+              />
+            </label>
 
-          <label>
-            Category
-            <input
-              name="cateogry"
-              type="text"
-              placeholder="Category"
-              onChange={(event) => setCategory(event.target.value)}
-            />
-          </label>
+            {/* SET ITEM STOCK */}
+            <label>
+              Stock
+              <input
+                name="stock"
+                type="number"
+                placeholder="Stock"
+                onChange={(event) => setStock(event.target.value)}
+              />
+            </label>
 
-          <label>
-            Thumbnail
-            <input
-              name="thumbnail"
-              type="text"
-              placeholder="Thumbnail"
-              onChange={(event) => setThumbnail(event.target.value)}
-            />
-          </label>
+            {/* SET ITEM BRAND */}
+            <label>
+              Brand
+              <input
+                name="brand"
+                type="text"
+                placeholder="Brand"
+                onChange={(event) => setBrand(event.target.value)}
+              />
+            </label>
 
-          {/* <label>
+            {/* SET ITEM CATEGORY */}
+            <label>
+              Category
+              <input
+                name="cateogry"
+                type="text"
+                placeholder="Category"
+                onChange={(event) => setCategory(event.target.value)}
+              />
+            </label>
+
+            {/* SET ITEM THUMBNAIL */}
+            <label>
+              Thumbnail
+              <input
+                name="thumbnail"
+                type="text"
+                placeholder="Thumbnail"
+                onChange={(event) => setThumbnail(event.target.value)}
+              />
+            </label>
+
+            {/* SET ITEM IMAGES */}
+            {/* <label>
             Images
             <input
               name="images"
@@ -160,10 +176,11 @@ function AddItem() {
               onChange={(event) => setImages(event.target.value)}
             />
           </label> */}
-          <button type="submit">Add Item</button>
-        </div>
-      </form>
-      {/* FORM END */}
+
+            <button type="submit">Add Item</button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

@@ -29,9 +29,7 @@ function ItemDetails() {
 
           {/* Back button */}
           <Link to="/">
-            <button>
-              Back
-            </button>
+            <button>Back</button>
           </Link>
         </div>
       )}
@@ -40,3 +38,5 @@ function ItemDetails() {
 }
 
 export default ItemDetails;
+
+// THIS IS WHAT RENDERS THE ITEM DETAILS WHEN YOU CLICK ON A PARTICULAR ITEM

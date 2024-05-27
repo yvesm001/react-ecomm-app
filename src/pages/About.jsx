@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 function About() {
   return (
@@ -34,7 +33,10 @@ function About() {
           <a href="https://github.com/yvesm001" target="_blank">
             <img className="team-icon" src="src\assets\github-logo2.png" />
           </a>
-          <a href="https://www.linkedin.com/in/yves-martinez-266379220" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/yves-martinez-266379220"
+            target="_blank"
+          >
             <img className="team-icon" src="src\assets\linkedin.png" />
           </a>
         </p>
@@ -48,7 +50,8 @@ function About() {
           </a>
           <a
             href="https://www.linkedin.com/in/claudia-gonz%C3%A1lez1/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-            target="_blank">
+            target="_blank"
+          >
             <img className="team-icon" src="src\assets\linkedin.png" />
           </a>
         </p>
@@ -70,3 +73,5 @@ function About() {
 }
 
 export default About;
+
+// THIS COMPONENT LAYOUT IS COMPLETE. FEEL FREE TO STYLE THROUGH CSS OR ADD THE TEXT YOU WANT UNDER YOUR NAME
