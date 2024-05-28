@@ -19,7 +19,7 @@ function ItemDetails() {
         <div className="item-details">
           <h1>{oneItem.title}</h1>
           <p>{oneItem.description}</p>
-          <p>{oneItem.price}</p>
+          <p>${oneItem.price}</p>
           <p>{oneItem.discountPercentage}</p>
           <p>{oneItem.rating}</p>
           <p>{oneItem.stock}</p>

@@ -8,7 +8,6 @@ import ItemDetails from "./pages/ItemDetails";
 import About from "./pages/About";
 import itemsData from "./assets/data.json"
 import NotFound from "./pages/NotFound.jsx";
-
 import { useState } from "react";
 import EditItem from "./components/EditItem.jsx";
 
