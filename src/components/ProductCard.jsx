@@ -10,6 +10,10 @@ function ProductCard({ item }) {
         <p>{item.description}</p>
         <p>${item.price}</p>{" "}
       </Link>
+      <Link to={`/items/edit/${item.id}`}>
+        {" "}
+        <a>Edit</a>
+      </Link>
     </div>
   );
 }

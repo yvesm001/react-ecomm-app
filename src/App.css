@@ -328,4 +328,11 @@ button[type="submit"] {
   cursor: pointer;
 }
 
- 
+ .edit-item-container {
+  margin-left: 160px;
+  margin-top: 73px;
+  margin-bottom: 35px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+ }
