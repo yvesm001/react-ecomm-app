@@ -8,7 +8,7 @@ export default function List({ items, setItems }) {
       <AddItem setItems={setItems} />
 
       {/* RENDER PRODUCTCARD FOR EACH ITEM TO DISPLAY LIST OF ITEMS */}
-      <h2>Item List</h2>
+      <h1>Item List</h1>
       {items.map((item) => {
         return <ProductCard key={item.id} item={item} />;
       })}

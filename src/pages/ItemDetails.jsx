@@ -1,6 +1,7 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { useState } from "react";
 import itemsData from "../assets/data.json";
+import GenerateScoreLabel from "../lib/GenerateLabelScore";
 
 function ItemDetails() {
   const { itemId } = useParams();
@@ -13,23 +14,22 @@ function ItemDetails() {
 
   return (
     <div>
-      <h1>Item Details</h1>
-      {!oneItem && <Navigate to="*" />}
-      {oneItem && (
-        <div className="item-details">
-          <h1>{oneItem.title}</h1>
-          <p>{oneItem.description}</p>
-          <p>${oneItem.price}</p>
-          <p>{oneItem.discountPercentage}</p>
-          <p>{oneItem.rating}</p>
-          <p>{oneItem.stock}</p>
-          <p>{oneItem.brand}</p>
-          <p>{oneItem.category}</p>
-          <img className="item-thumbnail" src={oneItem.thumbnail} />
+    <h1>Item Details</h1>
+    {!oneItem && <Navigate to="*" />}
+    {oneItem && (
+      <div className="item-details">
+        <h1>{oneItem.title}</h1>
+        <p>{oneItem.description}</p>
+        <h2>${oneItem.price}</h2>
+        <p>Discount: {oneItem.discountPercentage}% | {oneItem.rating} 🌟 </p>
+        <p> Stock: <GenerateScoreLabel stock= {oneItem.stock}/>
+        </p>
+        <h3>{oneItem.brand}: {oneItem.category}</h3>
+        <img className="item-thumbnail" src={oneItem.thumbnail} />
 
           {/* Back button */}
           <Link to="/">
-            <button>Back</button>
+            <button className="button-link">Back</button>
           </Link>
         </div>
       )}

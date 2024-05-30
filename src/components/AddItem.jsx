@@ -57,7 +57,7 @@ function AddItem({ setItems }) {
             <h1>Add an Item</h1>
 
             {/* SET ITEM ID */}
-            <label>
+            {/* <label>
               ID
               <input
                 name="id"
@@ -65,7 +65,7 @@ function AddItem({ setItems }) {
                 placeholder="ID"
                 onChange={(event) => setId(event.target.value)}
               />
-            </label>
+            </label> */}
 
             {/* SET ITEM TITLE */}
             <label>
@@ -101,7 +101,7 @@ function AddItem({ setItems }) {
             </label>
 
             {/* SET ITEM DISCOUNT PERCENTAGE */}
-            <label>
+            {/* <label>
               Discount Percentage
               <input
                 name="discountPercentage"
@@ -109,7 +109,7 @@ function AddItem({ setItems }) {
                 placeholder="Discount Percentage"
                 onChange={(event) => setDiscountPercentage(event.target.value)}
               />
-            </label>
+            </label> */}
 
             {/* SET ITEM RATING */}
             <label>

@@ -8,12 +8,16 @@ function ProductCard({ item }) {
         <h1>{item.title}</h1>
         <img className="item-thumbnail" src={item.thumbnail} />
         <p>{item.description}</p>
-        <p>${item.price}</p>{" "}
+        <p className="productCard-price">${item.price}</p>{" "}
       </Link>
-      <Link to={`/items/edit/${item.id}`}>
+      
+      <Link className="edit-btn" to={`/items/edit/${item.id}`}>
+      <button className="edit-btn">
         {" "}
-        <a>Edit</a>
+        <a className="button-edit">Edit</a>
+        </button>
       </Link>
+  
     </div>
   );
 }

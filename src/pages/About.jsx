@@ -27,8 +27,7 @@ function About() {
 
       <div className="team">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          IT student attending Ironhack after enjoying an introductory web development course.
           <br />
           <a href="https://github.com/yvesm001" target="_blank">
             <img className="team-icon" src="src\assets\github-logo2.png" />
@@ -42,8 +41,7 @@ function About() {
         </p>
 
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          I'm a designer and I also like the beach
           <br />
           <a href="https://github.com/claudiasgonz" target="_blank">
             <img className="team-icon" src="src\assets\github-logo2.png" />
@@ -57,8 +55,7 @@ function About() {
         </p>
 
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        42 year old designer who likes long walks on the beach, head scratches...am i a dog????
           <br />
           <a href="https://github.com/abniev#" target="_blank">
             <img className="team-icon" src="src\assets\github-logo2.png" />
